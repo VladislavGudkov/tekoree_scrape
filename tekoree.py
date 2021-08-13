@@ -1,8 +1,8 @@
 import tekore as tk
 
-client_id = "6ef640137c4d4b28b09daceed58a8de7"
+client_id = "client_id_here"
 #print(type(client_id))
-client_secret = "1c5b4bd5869f455e9d1e9100e2523673"
+client_secret = "client_secret_here"
 
 app_token = tk.request_client_token(client_id, client_secret)
 
