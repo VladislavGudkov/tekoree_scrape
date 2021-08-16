@@ -1,8 +1,8 @@
 import tekore as tk
 
-client_id = "client_id_here"
+client_id = "6ef640137c4d4b28b09daceed58a8de7"
 #print(type(client_id))
-client_secret = "client_secret_here"
+client_secret = "1c5b4bd5869f455e9d1e9100e2523673"
 
 app_token = tk.request_client_token(client_id, client_secret)
 
@@ -22,16 +22,18 @@ txt_lines = txt.readlines()
 ##print(sp)
 
 for tracks in sp.tracks.items:
-        #print(tracks.track.name +" - "+ tracks.track.artists[0].name +" - "+ tracks.track.album.id)
-        print(tracks.track.artists[0].name)
+        #print(tracks.track.artists[0].name +" - "+ tracks.track.name) #+" - "+ tracks.track.album.id)
+        #print(tracks.track.artists[0].name)
         #print(tracks.track.artists[1].name)
-        track1 = str(tracks.track.artists[0].name)
+        trackArtist = str(tracks.track.artists[0].name)
+        trackName = str(tracks.track.name)
+        #print(trackName)
         
-        #txt.write(track1+"\n")
+        txt.write(trackArtist+" - "+trackName+"\n")
 
 txt.close()
         #for names in tracks.track.artists:
-         #   print(names.name)
+        #print(names.name)d
         #print(len(tracks.track.artists[1].name))
         #print(tracks.track.artists[0].name)
         #print(tracks.track.external_ids)
