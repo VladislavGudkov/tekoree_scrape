@@ -28,15 +28,29 @@ for tracks in sp.tracks.items:
         trackArtist = str(tracks.track.artists[0].name)
         trackName = str(tracks.track.name)
         #print(trackName)
-        
-        txt.write(trackArtist+" - "+trackName+"\n")
 
-txt.close()
+        write_Artist_TrackName = str(trackArtist+" - "+trackName+"\n")
+        print(write_Artist_TrackName)
+        #txt.write(write_Artist_TrackName)
+
+        #txt.write(trackArtist+" - "+trackName+"\n")
+
+
         #for names in tracks.track.artists:
-        #print(names.name)d
+        #print(names.name)
         #print(len(tracks.track.artists[1].name))
         #print(tracks.track.artists[0].name)
         #print(tracks.track.external_ids)
         #print(tracks.track.artists[0].name) #prints artist names
 
 #print(sp.type)
+
+def writePlaylist():
+    for tracks in sp.tracks.items:
+        trackArtist = str(tracks.track.artists[0].name)
+        trackName = str(tracks.track.name)
+        write_Artist_TrackName = str(trackArtist+" - "+trackName+"\n")
+        txt.write(write_Artist_TrackName)
+
+writePlaylist()
+txt.close()
